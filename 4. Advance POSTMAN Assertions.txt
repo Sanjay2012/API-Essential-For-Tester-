@@ -1,0 +1,77 @@
+1. JSON Assertions
+- Use of "Response body:JSON value check"
+
+    var jsonData = pm.response.json();
+
+    pm.test("Correct first Name is required", function () {
+    pm.expect(jsonData.firstName).to.eql(environment.firstName);
+});
+
+-Check the response
+---------------------------------------------------------------
+
+2. Nested JSON Assertions
+- many times the json data itself is in nested format like
+
+{location:[
+city:Pune
+country:india]}
+
+- So in this case we need to write assertion in different way
+
+
+    var jsonData = pm.response.json();
+
+    pm.test("Correct city Name is required", function () {
+    pm.expect(jsonData.location.city).to.eql("Pune");
+});
+---------------------------------
+3. Asserting on Complicated assertions
+- Json format consists of
+	- Name-key pair
+	- Object-- It contain number of Name-Key pairs
+	- Array -- It contain the objects
+- If json file contain multiple objects inside array then its nested form
+
+{
+id=1;
+name= sanjay;
+pets:{
+	cats:[
+	{name:"dfd";
+	 age:10;
+	 breed:"fjhgj";},
+
+
+	{name:"ghj";
+	 age:1;
+	 breed:"fgh";}
+	]
+      }
+
+plants:{
+	mango:[
+	{name:"hgh";
+	 age:5;
+	 breed:"bnm";},
+
+	{name:"hgh";
+	 age:5;
+	 breed:"bnm";}
+
+	]
+
+     }
+}
+-------------------
+
+    var jsonData = pm.response.json();
+
+    pm.test("Correct city Name is required", function () {
+    pm.expect(jsonData.pets. cat[1].breed).to.eql("fgh");
+});
+
+4. Challenge: Complecated assertion
+5. Solution: Complecated assertion
+6. Quiz
+

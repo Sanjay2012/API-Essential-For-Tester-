@@ -1,0 +1,149 @@
+1. Creating collections and folders
+---------------------------------------------
+- collection is series of saved postman request
+- request into collection can be grouped into folders to keep things into organized
+- Even we can make nested folders
+
+Steps to create collection:
+- First click on collection tab
+- Click on "New collection" option
+- Enter the collection Name "Contact List"
+- Click on Create Button
+- Now you can see the created collection 
+
+Now to add folders inside collection for oranise the end point as per requirements
+- Click on Three dots
+- CLick on Add folder
+   1. GIve the name "Basic End point test" and click on create button
+   2. Follow same procedure for second folder "Negative test"
+
+
+Now adding some request into the folders
+
+-------------------------------------
+2. Creating POST and GET request
+-Use this site to test fake API 
+https://reqres.in/
+- Create "GET" request under basic end point test folder==> https://reqres.in/api/users?page=2
+	Check the status-200 Success and response
+
+- Create "POST" request under same folder, add the row json data we need to add into server  ====> https://reqres.in/api/users
+	Check status-201 Created and response
+- Create "GET" request by coping the initial GET request and test for specific id by appending the ===> https://reqres.in//api/users/{{valid_id}}
+
+------------------------
+
+3. Create PUT and DELETE request
+- "PUT" request- upodate the data into existing one===> https://reqres.in//api/users/{{valid_id}}
+	write the json format data into the body of it
+	Status- 204 No Content and no response
+	Then check the GET request for user id which we updated previously
+-"DELETE" request- delete the contents ===> https://reqres.in//api/users/{{valid_id}}
+	Status- 204 No Content and no response
+	Then check the GET request for user id which we updated previously
+	Status- 404 Not Found
+--------------------------------------------------------------
+4. Creating negative request
+
+Negative Scenarios to be checked
+- Record not found
+ Create "GET" request for record not foung ===>https://reqres.in//api/users/{{invalid_id}}
+	Status- 404 Not Found, response- not found
+
+- Request is sent with missing required information
+ Create "POST" request and while writting the data in body miss any field lets say "First Name": "";
+	Status- 400 Bad request
+	Response- "err":"Contact validation failed: FirstName: First Name is required"
+
+
+- Value has too many character  
+Create "POST" request and while writting the data in body First name we will add many characters >50
+	Status- 400 Bad request
+	Response- "err":
+
+
+- Value has Invalid characters
+Create "POST" request and while writting the data in body Last name invalid (enter things those not valid)  "Sanjay;"
+	Status- 400 Bad request
+	Response- "err":
+
+- Value is not in correct format
+Create "POST" request and while writting the data in body Email invalid format(enter things those not valid)  "email without @ and domain"
+	Status- 400 Bad request
+	Response- "err":
+------------------------------------------------------------------------------------
+5. Using envirnment variables
+
+- Click on Gear icon present on Right top corner of POSTMAN home pahe
+- Click on create environment ---give the name "User List"
+- Change environment from top (ebnvironment dropdown)
+- While creating POST request add those varibles in {{}}, instead of writing the hardcoded value
+
+------------------------------------------------------
+6. Saving response data as a variable
+- Create "POST" request
+- Go to test menu and writr javascript to save response
+
+var jsonData=pm.response.json();
+pm.environment.set("contactId", jsonData._Id);
+
+- Execute the POST request and see the environment variable grid
+- Then check by using GET request by putting ====> https://reqres.in//api/users/{{contactId}}
+---------------------------------------------------------------------------------------------------
+7. Challenge: Add variables to a request
+- Update two requests in the Basic Request Folder to use the {{contactId}} variable 
+- Add more variables in your UserList environment file, then use those variables in the body of your POST request 
+----------------------------------------------------
+8. Solution: Add variables to a request
+- Update two requests in the Basic Request Folder to use the {{contactId}} variable 
+	We can add into PUT and DELETE request
+
+- Add more variables in your UserList environment file, then use those variables in the body of your POST request 
+
+var jsonData=pm.response.json();
+pm.environment.set("contactId", jsonData._Id);
+pm.environment.set("contactId", jsonData._FirstName);
+pm.environment.set("contactId", jsonData._LastName);
+pm.environment.set("contactId", jsonData._Email);
+pm.environment.set("contactId", jsonData._Company);
+
+- Change the body data accordingly by using {{write the variables}}
+
+--------------------------------------------------------------------------------------
+9. Quiz
+
+i) Which HTTP verb would you use to update an existing contact?==> PUT
+------------------
+ii) Which one of these requests would result in a 404 error?
+a) doing a GET request to get all existing contacts
+b) doing a PUT request to update a contact
+c) doing a GET request on a contact that does not exist===> CORRECT
+d) doing a POST request with a missing First Name field
+
+------------------
+iii) What is a Postman collection?
+a) a group of assertions
+b) a group of name-value pairs
+c) a group of saved requests  ==> Correct(A collection is a group of saved Postman requests, which can be further organized into folders)
+d) a group of variables
+-------------------
+iv)Which URL would you use to get a list of all existing contacts?
+
+a) http://3.13.86.142:3000
+b) http://3.13.86.142:3000/contacts  ===> Correct (To get a list of all contacts, we do a GET request on the /contacts endpoint)
+c) http://contacts
+d) http://3.13.86.142:3000/contacts/5e1a41699d67e104cd8599eb
+----------------------
+v)What is a Postman environment?
+
+a) a set of code examples for use in assertions
+b)the server that you are requesting your records from
+c) a folder of saved requests
+d) a group of variables===>Correct (A Postman environment is a group of variables and their values)
+--------------------
+vi)What does it mean if a variable such as {{contactId}} turns orange?
+a) It means there is something wrong with the variable.
+b) It's just color-coding for any text in curly braces.
+c) It means the variable has a value in the environment.==> Correct(When a variable in the URL turns orange, it means that the Postman environment has a value for that variable)
+d) It means a Snippet was used to create the variable.
+-----------------------------------------------------------------------------------------------------------------------

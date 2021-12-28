@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "first_name": "Sharlene",
+      "last_name": "Ilem",
+      "email": "silem0@jimdo.com",
+      "gender": "Female",
+      "location": "Armenia"
+    },
+    {
+      "id": 2,
+      "first_name": "Granville",
+      "last_name": "Frogley",
+      "email": "gfrogley1@amazon.co.uk",
+      "gender": "Polygender",
+      "location": "Fengjia"
+    },
+    {
+      "id": 3,
+      "first_name": "Thomasina",
+      "last_name": "Bitten",
+      "email": "tbitten2@prnewswire.com",
+      "gender": "Male",
+      "location": "Nangalimang"
+    },
+    {
+      "id": 4,
+      "first_name": "Kenn",
+      "last_name": "Eallis",
+      "email": "keallis3@blogs.com",
+      "gender": "Agender",
+      "location": "Serra de Água"
+    }
+  ]
+}

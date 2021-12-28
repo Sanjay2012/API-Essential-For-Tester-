@@ -1,0 +1,7 @@
+# dummy api
+
+https://parabank.parasoft.com/parabank/index.htm
+
+
+# swagger given by developers
+https://restful-booker.herokuapp.com/apidoc/index.html

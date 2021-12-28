@@ -1,0 +1,54 @@
+1. Adding the NodeJS plugin to Jenkins
+- Add NodeJS plugin
+Steps
+- Manage Jenkins---Manage plugins--avalable--serch for NodeJS
+- go to confi system   set the newman path
+- go to global tool confi   
+
+---------------------------------
+
+2. Creating a Jenkins project
+Steps
+- Click on new item and enter item name
+- Click on Freestyle project ()
+(Need to set up this project to run newman)
+- need to fnd Nodejs path-- scroll down to build environment
+- Provide Node & npm bin/folder to PATH
+- Go to build section & add newman command 
+- Add "newman run collection_name.json -e collection_name.environment.json"
+- Still u can find that build failed
+- need to assest folder
+--------------------------------------------------
+
+3. Adding assets to  the Jenkins project
+- run the last project
+- it failed
+- error: no such file or directory
+- copy the workspace present in console output
+- navigate to that folder
+- add both the collection into it
+
+--------------------------------------------------------
+4. Configuring automatic runs
+
+- go to project
+- Go to built -- choose "Build periodically"
+- enter the chron language data to run project
+-Format
+minute hour date(month)  month  day(week)
+
+0. Every minute----> * * * * *
+1. “At 00:00 on day-of-month 1 and 15 and on Wednesday.” -----> 0 0 1,15 * 3
+2. “At 00:05 in August.”----- > 5 0 * 8 *
+3. “At 14:15 on day-of-month 1.”-----> 15 14 1 * *
+4. “At 22:00 on every day-of-week from Monday through Friday.” at 2021-11-26 22:00:00----> 0 22 * * 1-5
+5. “At minute 23 past every 2nd hour from 0 through 20.” ----> 23 0-20/2 * * *
+6. “At 04:05 on Sunday.”--->5 4 * * sun
+7. “At minute 0 past hour 0 and 12 on day-of-month 1 in every 2nd month.”--->0 0,12 1 */2 *
+8. “At 04:00 on every day-of-month from 8 through 14.”----> 0 4 8-14 * *
+9. “At 00:00 on day-of-month 1 and 15 and on Wednesday.”---> 0 0 1,15 * 3
+10. “At 00:00 on Sunday.”------> @weekly
+
+
+--------------------
+5. Quiz

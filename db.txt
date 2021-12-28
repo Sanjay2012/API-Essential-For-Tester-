@@ -1,0 +1,22 @@
+{
+  "view": [
+    {
+      "id": 1,
+      "Fname": "Sharlene",
+      "Lname": "Ilem",
+      "gender": "Female"
+},
+    {
+      "id": 2,
+      "Fname": "Sachin",
+      "Lname": "Thakur",
+      "gender": "Male"
+    },
+    {
+      "id": 3,
+       "Fname": "Prashant",
+      "Lname": "Kumar",
+      "gender": "Male"
+    }
+  ]
+}

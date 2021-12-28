@@ -1,0 +1,36 @@
+1. Using the collection runner
+- Go to collection level
+- Click on three dots 
+- Click on Run collection
+- Check/uncheck which request you want to run
+- then click on run button
+
+----------------------------------------
+2. Exporting your collection
+- Go to collection level
+- Click on three dots 
+- save the collection as .json
+- now  you can share that collection to friend for run
+
+-------------------------------
+
+npmjs.newman
+
+
+3. Running your collection with Newman
+- export the collection   "userlist.collection.json"
+- create another json file "userlist.environment.json"
+
+
+- npm install -g newman
+
+- use below command to run the collection
+
+newman run userlist.collection.json -e userlist.environment.json
+
+newman run Github.postman_collection.json -e Github.environment.json
+
+
+newman run Github.postman_collection.json -e GITHUB.json
+-----------------------------------------
+4. Quiz

@@ -1,0 +1,52 @@
+Imporatnt sites for exercise the API Methods
+------------------------------------------------
+1. https://documenter.getpostman.com/view/6961294/S1TVXyAS 
+2. https://regres.in
+2. https://dummy.restapiexample.com
+3. https://gorest.co.in
+
+https://www.mockaroo.com/
+
+Contact List API
+Pet Owners mock API
+https://restcountries.eu
+https://petstore.swagger.io
+
+Next Step
+
+1. API Testing foundation
+2. Learning Jenkins
+3. DevOps Foundation: CD/CI
+
+
+======================
+Jenkins Basic:
+
+Username: Shiv2020
+Password: Shiv@123
+
+
+- download the LTE jenkins war file
+- requirement java installed
+- java -version
+- java -jar "file path" / u may run from file location
+- java -jar jenkins.war  // used to run jenkins war file
+- password: 6f2ffcc7785b48ed85102143ca523bad
+- port 8080
+- write "localhost:8080" in address bar after jenkins up and running
+- asking the password
+- Select "Install suggested plugins"
+- Configure UN and PWD
+- http://192.168.43.191:8080/
+
+
+
+
+------------------------------------------------------------
+GIT Details for Authorization 
+
+
+https://github.com/
+PWD: Shivansh$2020
+
+

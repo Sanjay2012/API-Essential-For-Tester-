@@ -1,0 +1,77 @@
+Introduction
+========================
+- Recent years the software development process used microservices architectural model (Used API)
+- API used to communicate between user application model and server
+- So its needed to test API on regular basis to test user request and the responses from server
+- That is to test what we are expecting
+- POSTMAN (free) is the software widly used to test API
+========================================
+What we should know
+----------------------
+1. How to run simple command line request
+2. General knowledge of:
+ - HTTP request
+ - API's
+ - Node.js
+ - Continuous integration
+	{Need to learn:
+	1. Learning REST API's
+	2. Introducing POSTMAN
+	3. Continuous Integration: Tools }
+
+======================================
+Seting up environment
+----------------------------------
+1. Download the free version of postman
+  https://www.postman.com/downloads/
+
+(-  You should have postman command line mode should be installed--- newman-- npm---node.js)
+
+2. Download Node.js  
+ - u may check either node installed or not using command line
+    node --version
+ - if not u may download
+	https://nodejs.org/en/download/
+
+3. Check for npm
+ > npm --vesion
+
+4. Now install newman (if you already installed NPM)
+ > npm install -g newman   //now globaly available
+
+
+5. You need to install Jenkins
+
+===============================
+## creating own API
+==============================
+npm install -g json-server
+json-server <<fileName.json>>
+
+-------------------------------------------
+
+## run collection from cmd
+========================
+npm --vesion
+npm install -g newman
+npm install newman -reporter-html
+newman run <<expoetred collection.json>>
+
+newman run <<expoetred collection.json>> -r html
+
+newman run <<public link>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

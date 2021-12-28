@@ -1,0 +1,28 @@
+{
+  "budy": [
+    {
+      "id": 1,
+      "first_name": "Sachin",
+      "last_name": "Ilem",
+      "email": "sachin@jimdo.com",
+      "gender": "Male",
+      "location": "Pune"
+    },
+    {
+      "id": 2,
+      "first_name": "Shashikant",
+      "last_name": "Frogley",
+      "email": "Shashikant@amazon.co.uk",
+      "gender": "Male",
+      "location": "UK"
+    },
+    {
+      "id": 3,
+      "first_name": "Narendra",
+      "last_name": "Bitten",
+      "email": "Narendra@prnewswire.com",
+      "gender": "Male",
+      "location": "London"
+    }
+  ]
+}

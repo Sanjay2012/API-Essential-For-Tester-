@@ -1,0 +1,6 @@
+1. Introduction
+2. Getting started with POSTMAN
+3. Easy POSTMAN Assertions
+4. Advance POSTMAN Assertions
+5. Running the test collection
+6. Automating your collection

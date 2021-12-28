@@ -1,0 +1,75 @@
+1. Status type Assertions
+- use the snipest provided-- (Status code: Code is 200) for both Basic end point and Negative folder
+- Use Get methods for validation
+- Check Test Result
+-----------------------------------------------------------
+2. Body Assertions
+- use the snipest provided for both Basic end point and Negative folder
+	--Response body: Contain String
+	-- Response body: is equal to String
+- Use Get methods for validation
+- Check Test Result
+
+------------------------------------------------------
+3. Header and response time assertions
+- use the snipest provided for both Basic end point and Negative folder
+	-Response headers: content-type header check
+- Use Get methods for validation
+- Check Test Result
+
+Note:
+- We can add assertions on collection/folder levels too
+- Click on three dots present for collection/folder
+- Click on Edit
+- Go to Tests tab
+- Add the required assertions from snipet
+- Execute the request
+- Observe the result for respective request
+--------------------------------------------------------
+
+4. Debugging with POSTMAN Console
+- POSTMAN consol is present on bottom side of POSTMAN home pahe
+- used to check what exactly the issue with request
+
+---------------------------------------------------
+5. Challenge: Write Assertion
+- Create a new POST request to negative test folder ; the request should result in some type of validation error
+- Add  body type assertions to the request to validate that the appropriate error message is return
+
+--------------------------------------------------
+6. Solution: Write Assertion
+
+- Create POST request for which EMail is missing in body
+- Then using response header snipest check for assertion
+
+-------------------------------------
+7. Quiz
+
+What does the Postman console do?
+
+It allows us to see exactly what request was sent to the server, and what response was returned.==>Correct (The Postman console is a logging tool that shows what requests were sent and what responses were received.)
+It shows us what variables we are using.
+It allows us to create assertions.
+It gives us the ability to run collections automatically.
+----------
+Which of the following is a statement in a body assertion?
+
+pm.environment.set("contactId", jsonData._id);
+pm.expect(pm.response.text()).to.include("cjones");===>Correct
+pm.response.to.have.status(200);
+var jsonData = pm.response.json();
+------------------------
+Why would you want to use a response time assertion?
+
+to make sure that the appropriate header was used in the response
+to make sure that the response code was correct
+to make sure that the response wasn't too big
+to make sure that the API is performing well====> Correct
+----------------------
+What does a status type assertion do?
+
+It asserts that the correct body was returned in the response.
+It asserts that the correct response code was returned.===>Correct
+It asserts that Javascript was used.
+It asserts that a 200 code was returned.
+========================================================
